@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sample.events.model">
+    <class name="Event" table="events">
+        <id name="id" column="uid" type="long" unsaved-value="null">
+            <generator class="native"></generator>
+        </id>
+        <property name="name" type="string" length="100" />
+        <property name="startDate" column="start_date" type="date"/>
+        <property name="duration" type="integer" />
+        
+      <many-to-one name="location" column_id="location_id" class="Location" fetch="join"/>
+      
+        
+    </class>
+</hibernate-mapping>

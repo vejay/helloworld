@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.username">mysql</property>
+        <property name="connection.password">mysql</property>
+        <property name="connection.url"></property>
+        <property name="connection. driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connect.url">jdbc:mysql://localhost:3306/pattu</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <mapping resource="com/sample/events/model/Event.hbm.xml"></mapping>
+       <!-- <mapping resource="com/sample/events/model/Location.hbm.xml"></mapping> -->
+        <!--<mapping resource="com/sample/events/model/Speaker.hbm.xml"></mapping>
+        <mapping resource="com/sample/events/model/Attendee.hbm.xml"></mapping> -->
+    </session-factory>
+</hibernate-configuration>
